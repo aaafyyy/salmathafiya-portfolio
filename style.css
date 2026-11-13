@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8f3eb;
+    color: #493326;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 9%;
+    background: #fffdf9;
+    border-bottom: 1px solid #e8ddcd;
+}
+
+nav h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #9a7046;
+}
+
+nav a {
+    text-decoration: none;
+    color: #493326;
+    margin-left: 30px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b58b55;
+}
+
+/* Hero section */
+
+.hero {
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(
+        135deg,
+        #f8f3eb,
+        #eee1d0,
+        #f9f5ef
+    );
+}
+
+.small-heading {
+    color: #a17a4e;
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 8vw, 78px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #a47a4d;
+    font-style: italic;
+}
+
+.description {
+    max-width: 550px;
+    line-height: 2;
+    font-size: 14px;
+    color: #75665b;
+    margin: 25px 0 35px;
+}
+
+.btn {
+    text-decoration: none;
+    background: #493326;
+    color: white;
+    padding: 15px 32px;
+    font-size: 13px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a47a4d;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+
+footer {
+    background: #493326;
+    color: #f8f3eb;
+    text-align: center;
+    padding: 23px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Mobile design */
+
+@media (max-width: 600px) {
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+}
+
+.biodata-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.biodata-card {
+    background: #fffdf9;
+    padding: 40px;
+    border: 1px solid #e8ddcd;
+    border-radius: 10px;
+    box-shadow: 0 10px 35px #49332612;
+}
+
+.biodata-card h2 {
+    font-family: 'Playfair Display', serif;
+    color: #a47a4d;
+    margin: 25px 0;
+    font-size: 27px;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 16px 0;
+    border-bottom: 1px solid #eee4d8;
+}
+
+.detail span {
+    color: #9a7046;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.detail p {
+    color: #493326;
+    font-size: 13px;
+    text-align: right;
+}
+
+.career {
+    color: #75665b;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 35px;
+    color: #a47a4d;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .biodata-card {
+        padding: 22px;
+    }
+
+    .detail {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .detail p {
+        text-align: left;
+    }
+}
+
+/* Smooth page animation */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero {
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll reveal */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
